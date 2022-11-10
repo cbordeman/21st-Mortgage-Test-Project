@@ -104,9 +104,9 @@ internal class MainWindowViewModel : BaseViewModel
         var longs = new List<long>();
         foreach (var str in values)
         {
-            if (!long.TryParse(str, out _))
+            if (!long.TryParse(str, out long l))
                 throw new Exception($"\"{str}\" is not a number");
-            longs.Add(long.Parse(str));
+            longs.Add(l);
         }
         return longs;
     }
